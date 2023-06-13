@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Equilateral_Triangle.cpp" />
+    <ClCompile Include="Wrong_Figure.cpp" />
     <ClCompile Include="Figure.cpp" />
     <ClCompile Include="Homework_8.2.cpp" />
     <ClCompile Include="Isosceles_Triangle.cpp" />
@@ -141,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Equilateral_Triangle.h" />
+    <ClInclude Include="Wrong_Figure.h" />
     <ClInclude Include="Figure.h" />
     <ClInclude Include="Isosceles_Triangle.h" />
     <ClInclude Include="Parallelogram.h" />
