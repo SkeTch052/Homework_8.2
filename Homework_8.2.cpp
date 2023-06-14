@@ -17,18 +17,17 @@ int main() {
     setlocale(LC_ALL, "Russian");
 
     try {
-        Triangle triangle;
-        Right_Triangle right_triangle;
-        Isosceles_Triangle isosceles_triangle;
-        Equilateral_Triangle equilateral_triangle;
+        Triangle triangle; triangle.print_info();
+        Right_Triangle right_triangle; right_triangle.print_info();
+        Isosceles_Triangle isosceles_triangle; isosceles_triangle.print_info();
+        Equilateral_Triangle equilateral_triangle; equilateral_triangle.print_info();
 
-        Quadrangle quadrangle;
-        Rectangle rectangle;
-        Square square;
-        Parallelogram parallelogram;
-        Rhombus rhombus;
+        Quadrangle quadrangle; quadrangle.print_info();
+        Rectangle rectangle; rectangle.print_info();
+        Square square; square.print_info();
+        Parallelogram parallelogram; parallelogram.print_info();
+        Rhombus rhombus; rhombus.print_info();
     }
-    //catch (const Wrong_Figure& error) { std::cout << "Ошибка создания фигуры. Причина: " << error.what() << std::endl; }
     catch (const std::domain_error& er) { std::cout << "Ошибка создания фигуры. Причина: " << er.what() << std::endl; }
 
     return 0;

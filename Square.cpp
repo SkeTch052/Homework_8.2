@@ -6,9 +6,15 @@ Square::Square() {
     name = "Квадрат";
     c = b; a = b;
     if ((a != c) || (a != b) || (a != d)) {
-        //throw Wrong_Figure();
         throw std::domain_error("Все стороны должны быть равны");
-    } else {
-        std::cout << name << " (стороны: " << a << ", " << b << ", " << c << ", " << d << "; углы: " << A << ", " << B << ", " << C << ", " << D << ") создан\n" << std::endl;
     }
+    else if ((A + B + C + D) != 360) {
+        throw std::domain_error("Сумма углов не равна 360");
+    }
+    else if ((A != 90) || (B != 90) || (C != 90) || (D != 90)) {
+        throw std::domain_error("Все углы должны быть равны 90");
+    }
+}
+void Square::print_info() {
+    Quadrangle::print_info();
 }

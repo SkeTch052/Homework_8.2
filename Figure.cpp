@@ -1,9 +1,11 @@
 #include "Figure.h"
 #include <string>
+#include <iostream>
 
 Figure::Figure() {
     sides_count = 0;
     name = "Фигура";
 }
-int Figure::get_sides_count() { return sides_count; }
-std::string Figure::get_name() const { return name; }
+void Figure::print_info() {
+    std::cout << name;
+}

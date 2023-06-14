@@ -7,4 +7,5 @@ protected:
     int a, b, c, A, B, C;
 public:
     Triangle();
+    void print_info() override;
 };

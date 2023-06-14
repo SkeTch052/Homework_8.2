@@ -1,4 +1,8 @@
 #pragma once
 #include "Triangle.h"
 
-class Right_Triangle : public Triangle { public: Right_Triangle(); };
+class Right_Triangle : public Triangle { 
+public: 
+	Right_Triangle(); 
+	void print_info() override;
+};

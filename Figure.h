@@ -7,6 +7,5 @@ protected:
     std::string name;
 public:
     Figure();
-    int get_sides_count();
-    std::string get_name() const;
+    virtual void print_info();
 };

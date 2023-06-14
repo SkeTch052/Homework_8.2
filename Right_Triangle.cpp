@@ -4,12 +4,14 @@
 
 Right_Triangle::Right_Triangle() {
     name = "Прямоугольный треугольник";
-    C = 90;
+    A = 50, B = 40, C = 90;
     if (C != 90) {
-        //throw Wrong_Figure();
         throw std::domain_error("Угол C не равен 90");
     }
-    else {
-        std::cout << name << " ( Стороны: " << a << ", " << b << ", " << c << "; углы " << A << ", " << B << ", " << C << ") создан\n" << std::endl;
+    else if ((A + B + C) != 180) {
+        throw std::domain_error("Сумма углов не равна 180");
     }
+}
+void Right_Triangle::print_info() {
+    Triangle::print_info();
 }

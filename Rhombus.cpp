@@ -6,10 +6,15 @@ Rhombus::Rhombus() {
     name = "Ромб";
     a = 30; b = a; c = a; d = a;
     if ((a != b) || (a != c) || (a != d)) {
-        //throw Wrong_Figure();
         throw std::domain_error("Все стороны должны быть равны");
+    } 
+    else if ((A != C) || (B != D)) {
+        throw std::domain_error("Углы A, C и B, D должны быть попарно равны");
     }
-    else {
-        std::cout << name << " (стороны: " << a << ", " << b << ", " << c << ", " << d << "; углы: " << A << ", " << B << ", " << C << ", " << D << ") создан\n" << std::endl;
+    else if ((A + B + C + D) != 360) {
+        throw std::domain_error("Сумма углов не равна 360");
     }
+}
+void Rhombus::print_info() {
+    Quadrangle::print_info();
 }
