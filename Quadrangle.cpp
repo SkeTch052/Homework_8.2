@@ -1,15 +1,20 @@
 #include "Quadrangle.h"
+#include "Wrong_Figure.h"
+#include <iostream>
 
 Quadrangle::Quadrangle() {
     name = "Четырёхугольник";
     sides_count = 4;
-    a = 10, b = 20, c = 30, d = 40, A = 50, B = 60, C = 70, D = 80;
+    a = 10, b = 20, c = 30, d = 40, A = 100, B = 70, C = 110, D = 80;
+    if (sides_count != 4) {
+        //throw Wrong_Figure();
+        throw std::domain_error("Число сторон не равно 4");
+    }
+    else if ((A + B + C + D) != 360) {
+        //throw Wrong_Figure();
+        throw std::domain_error("Сумма углов не равна 360");
+    }
+    else {
+        std::cout << name << " (стороны: " << a << ", " << b << ", " << c << ", " << d << "; углы: " << A << ", " << B << ", " << C << ", " << D << ") создан\n" << std::endl;
+    }
 }
-//int Quadrangle::get_side_a() const { return a; }
-//int Quadrangle::get_side_b() const { return b; }
-//int Quadrangle::get_side_c() const { return c; }
-//int Quadrangle::get_side_d() const { return d; }
-//int Quadrangle::get_angle_A() const { return A; }
-//int Quadrangle::get_angle_B() const { return B; }
-//int Quadrangle::get_angle_C() const { return C; }
-//int Quadrangle::get_angle_D() const { return D; }
